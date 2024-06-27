@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeta Planeta Brazil.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <a class="englishb" href="index.html">Portuguese Version</a>
+    </div>
+    <nav class="menudek">
+        <header>
+            <img class="logo" src="logolanc.jpg" alt="Logo do Instituto Projeta Planeta">
+        </header>
+        <h1 class="logotext">Projeta Planeta Institute</h1>
+        <ul class="linkes">
+            <li><a href="indexeng(1).html">Mission, Vision and Values</a></li>
+            <li><a href="indexeng(p).html">Research</a></li>
+            <li><a href="indexeng(qs).html">About Us</a></li>
+            <li><a href="indexeng(c).html">courses</a></li>
+        </ul>
+    </nav>
+    <h1>Institutional Video</h1>
+    <div class="video-container">
+        <video class="videoa" controls>
+            <source src="IPP.mp4" type="video/mp4">
+            YOur browser does not support the video tag.
+        </video>
+    </div>
+
+
+            <header class="news">
+                    <h1>News</h1>
+                    <div class="news-details">
+                        <img class="news-image" src="WhatsApp-Image-2019.webp" alt="Membro 1">
+                        <a href="https://tveradioencontrodasaguas.com.br/professor-da-uea-ganha-premio-nacional-da-academia-de-ciencias-de-cuba/">UEA Professor Wins National Prize from the Cuban Academy of Sciences</a>
+                    </div>
+            </header>
+        <!-- Faces adicionais do cubo (back, left, right, top, bottom) -->
+
+    <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+            <img src="202914.jpeg" alt="foto" class="slider">
+        </div>
+        <div class="mySlides fade">
+            <img src="202916.jpeg" alt="foto" class="slider">
+        </div>
+        <div class="mySlides fade">
+            <img src="202931.jpg" alt="foto" class="slider">
+        </div>
+        <div class="mySlides fade">
+            <img src="202932.jpg" alt="foto" class="slider">
+        </div>
+        <div class="mySlides fade">
+            <img src="202933.jpg" alt="foto" class="slider">
+        </div>
+        <div class="mySlides fade">
+            <img src="dscn2583.jpg" alt="foto" class="slider">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <address>
+            Email: contato@projetaplaneta.org.br<br>
+            Phone: +55 92 99322-7026<br>
+            Address: Rua Major Gabriel, 1818, P 14, Manaus - AM.<br>
+            <a class="titlelink" href="https://www.instagram.com/institutoprojetaplaneta/" >Instagram</a>
+            <a class="titlelinked" href="https://www.linkedin.com/company/instituto-projeta-planeta/" target="_blank">LinkedIn</a>
+        </address>
+    <script>
+        /*slide image*/
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); // Muda a imagem a cada 2 segundos
+        }
+
+        function plusSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            slideIndex += n;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            if (slideIndex < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #000000;
+    line-height: 1.6;
+}
+
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+
+.loading-bar {
+    width: 0%;
+    height: 4px;
+    background-color: #3498db;
+    transition: width 0.5s;
+}
+
+
+
+.left {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.right {
+    flex: 2;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.logotext {
+    color: white;
+    margin-right: auto; /* Removido o valor fixo e substituído por 'auto' */
+    margin-left: 35px
+}
+
+.linkes {
+    margin-right: 5%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adicionado para distribuir os elementos */
+    background-image: url('10004.jpg');
+    padding: 10px; /* Adicionado espaçamento interno */
+}
+
+header img {
+    height: 100px; /* Ajustado para caber melhor */
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+    color: white
+}
+
+ul li a {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #03292b;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+ul li a::before {
+    content: "<";
+    margin-right: 5px; /* Espaço entre a seta e o texto do link */
+    color: white;
+}
+
+/* Estiliza a seta */
+ul li a::before {
+    color: white; /* Cor da seta */
+    font-weight: bold; /* Pode ajustar o tamanho e estilo da fonte se desejar */
+}
+
+#language-button {
+    padding: 10px 15px;
+    background-color: #3caeb66e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.language-link {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo das seções */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos títulos das seções */
+section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estilo da seção de contato */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer address {
+    font-style: normal;
+}
+
+/* Estilo dos links */
+a {
+    color: #333;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+/* Esconde todos os slides por padrão */
+.mySlides {
+    display: none;
+}
+
+/* Estilo para os botões de navegação */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Posiciona o botão da esquerda à esquerda */
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Posiciona o botão da direita à direita */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Adiciona um efeito quando passa o mouse sobre os botões */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.titlelink,
+.titlelinked {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    background-color: #006977; /* Cor do LinkedIn */
+    border: 2px solid #343b3f; /* Cor do LinkedIn */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.titlelink:hover,
+.titlelinked:hover {
+    background-color: #00577e; /* Cor mais escura */
+    color: rgb(0, 0, 0);
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0077b5; /* Cor do LinkedIn */
+    border: 2px solid #0077b5; /* Cor do LinkedIn */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.botao:hover {
+    background-color: #00577e; /* Cor mais escura */
+    color: white;
+}
+
+/* Estilos específicos para as seções de cursos */
+.courses {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.course {
+    width: 300px;
+    margin: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.course img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.course h2 {
+    margin: 15px 0;
+    font-size: 1.5em;
+}
+
+.course p {
+    padding: 0 15px 15px;
+    color: #555;
+}
+
+#members {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.member {
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.member img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.member h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.member p {
+    color: #555;
+}
+
+/*mobile */
+
+@media screen and (max-width: 900px) {
+    /* Estilos para telas de até 900px (como tablets) */
+    body {
+        max-width: 900px;
+        /* Outros estilos específicos para essa largura */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* Estilos para telas de até 400px (como smartphones) */
+    body {
+        max-width: 400px;
+        /* Outros estilos específicos para essa largura */
+    }
+}
+
+/*video*/
+.video-wrapper {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.videotext {
+    margin-left: 25%;
+    height: 50px;
+}
+
+/*noticias*/
+.news {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.news-content {
+    display: flex;
+    align-items: center;
+}
+
+.news-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+.news-image {
+    max-width: 100px; /* Largura máxima da imagem */
+    width: 100%;
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+}
+.news a {
+    color: #000000;
+}
+
+footer {
+    width: 100%;
+    background-color: #4627f8; /* Ajuste conforme necessário */
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #114b41; /* Opcional: adiciona uma borda superior */
+    position: fixed;
+}
+
+footer address {
+    margin: 0;
+}
+
+footer a {
+    color: #000000; /* Cor padrão dos links */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    margin-right: 10px; /* Espaçamento entre os links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Sublinha os links ao passar o mouse */
+}

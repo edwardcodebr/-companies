@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Projeta Planeta - Ciência, Tecnologia e Inovação Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+    <a class="englishb" href="indexeng.html">English Version</a>
+</div>
+    <nav class="menudek">
+        <header>
+            <img class="logo" src="logolanc.jpg" alt="Logo do Instituto Projeta Planeta">
+        </header>
+        <h1 class="logotext">Instituto Projeta Planeta</h1>
+        <ul class="linkes">
+            <li><a href="index(1).html">Missão, Visão e Valores</a></li>
+            <li><a href="index(p).html">Pesquisas</a></li>
+            <li><a href="index(qs).html">Quem Somos</a></li>
+            <li><a href="index(c).html">Cursos Profissionalizantes</a></li>
+        </ul>
+    </nav>
+    <h1>Video Institucional</h1>
+    <div class="video-container">
+        <video class="videoa" controls>
+            <source src="IPP.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+        </video>
+    </div>
+
+
+            <header class="news">
+                    <h1>Noticias</h1>
+                    <div class="news-details">
+                        <img class="news-image" src="WhatsApp-Image-2019.webp" alt="Membro 1">
+                        <a href="https://tveradioencontrodasaguas.com.br/professor-da-uea-ganha-premio-nacional-da-academia-de-ciencias-de-cuba/">Professor da UEA ganha Prêmio Nacional da Academia de Ciências de Cuba</a>
+                    </div>
+            </header>
+        <!-- Faces adicionais do cubo (back, left, right, top, bottom) -->
+
+    <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+            <img src="202914.jpeg" alt="foto" class="slider">
+        </div>
+        <div class="mySlides fade">
+            <img src="202916.jpeg" alt="foto" class="slider">
+        </div>
+        <div class="mySlides fade">
+            <img src="202931.jpg" alt="foto" class="slider">
+        </div>
+        <div class="mySlides fade">
+            <img src="202932.jpg" alt="foto" class="slider">
+        </div>
+        <div class="mySlides fade">
+            <img src="202933.jpg" alt="foto" class="slider">
+        </div>
+        <div class="mySlides fade">
+            <img src="dscn2583.jpg" alt="foto" class="slider">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <address>
+            Email: contato@projetaplaneta.org.br<br>
+            Telefone: 92 99322-7026<br>
+            Endereço: Rua Major Gabriel, 1818, P 14, Manaus - AM.<br>
+            <a class="titlelink" href="https://www.instagram.com/institutoprojetaplaneta/" >Instagram</a>
+            <a class="titlelinked" href="https://www.linkedin.com/company/instituto-projeta-planeta/" target="_blank">LinkedIn</a>
+        </address>
+    <script>
+        /*slide image*/
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); // Muda a imagem a cada 2 segundos
+        }
+
+        function plusSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            slideIndex += n;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            if (slideIndex < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
+</body>
+</html>
